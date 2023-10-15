@@ -1,7 +1,17 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * add - a function that adds two integers and returns the result.
  *
- * Return: Always 0.
+ * @a: first input
+ * @b: second input
+ *
+ * Return: the sum.
  */
+
+int add(int a, int b)
+{
+	int s = a + b;
+
+	return (s);
+}
