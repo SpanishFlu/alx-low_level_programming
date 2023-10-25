@@ -9,7 +9,6 @@
 char *leet(char *str)
 {
 	char *ptr = str;
-	char leet_chars[] = "aAeEoOtTlL";
 	char leet_replacements[] = "443370711";
 
 	while (*ptr)
