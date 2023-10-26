@@ -2,11 +2,11 @@
 
 /**
  * _strspn - Gets the length of a prefix substring.
- * @s: The string to search.
- * @accept: The characters to count.
+ * @s: The string to search in.
+ * @accept: The string containing characters to match.
  *
- * Return: The number of bytes in the initial segment of s that consist
- * only of bytes from accept.
+ * Return: The number of bytes in the initial segment of s consisting
+ * only of bytes that appear in accept.
  */
 unsigned int _strspn(char *s, char *accept)
 {
@@ -26,11 +26,14 @@ unsigned int _strspn(char *s, char *accept)
 			}
 			accept++;
 		}
-		if (!found)
+
+		if (found == 0)
 			break;
+
 		s++;
-		accept -= count;
+		accept = accept - count;
 	}
+
 	return (count);
 }
 
