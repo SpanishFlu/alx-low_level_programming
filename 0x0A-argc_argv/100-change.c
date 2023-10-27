@@ -9,13 +9,18 @@
  */
 int main(int argc, char *argv[])
 {
+	int amount;
+	int coins[] = {25, 10, 5, 2, 1};
+	int coin_count = 0;
+	int i;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
 
-	int amount = atoi(argv[1]);
+	amount = atoi(argv[1]);
 
 	if (amount < 0)
 	{
@@ -23,10 +28,7 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	int coins[] = {25, 10, 5, 2, 1};
-	int coin_count = 0;
-
-	for (int i = 0; i < 5; i++)
+	for (i = 0; i < 5; i++)
 	{
 		while (amount >= coins[i])
 		{
