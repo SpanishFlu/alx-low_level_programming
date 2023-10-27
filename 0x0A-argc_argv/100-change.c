@@ -5,9 +5,6 @@
  * main - Entry point of the program
  * @argc: The number of command-line arguments
  * @argv: An array of strings containing the command-line arguments
- *
- * Description: This program calculates the minimum number of coins needed to make change for a given amount of money. It uses coin values of 25, 10, 5, 2, and 1 cent. If the number of arguments passed to the program is not exactly 1, it prints "Error" and returns 1. If the amount passed as the argument is negative, it prints 0.
- *
  * Return: 0 (Success), 1 (Error)
  */
 int main(int argc, char *argv[]) {
