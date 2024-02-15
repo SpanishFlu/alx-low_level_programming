@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
+#include <string.h>
 
 /**
  * create_file - Creates a file and writes text to it.
@@ -13,7 +14,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd = open(filname, O_CREATE | O_WRONLY | O_TRUNC | 0600);
+	int fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC | 0600);
 	ssize_t write_status;
 
 	if (filename == NULL || fd == -1)
@@ -21,7 +22,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content != NULL)
 	{
-		write_status = write(fd, text_content, strlen(text_content);
+		write_status = write(fd, text_content, strlen(text_content));
 
 		if (write_status == -1)
 		{
