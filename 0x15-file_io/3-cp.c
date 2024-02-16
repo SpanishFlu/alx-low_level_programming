@@ -6,7 +6,7 @@
 #include <sys/stat.h>
 
 #define BUFFER_SIZE 1024
-
+#define STDERR_FILENO STDOUT_FILENO
 /**
  * main - Copies the content of a file to another file.
  * @argc: Number of arguments.
