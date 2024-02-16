@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 	}
 
 	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IRGRP | S_IWGRP | S_IROTH);
-	if (fd_to == -1)
+	if (fd_to == -1 || fd_to == NULL)
 	{
 		dprintf(2, "Error: Can't write to %s\n", argv[2]);
 		close(fd_from);
