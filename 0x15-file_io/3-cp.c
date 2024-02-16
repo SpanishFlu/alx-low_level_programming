@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IRDRP | S_IWDRP | S_IROTH);
+	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	if (fd_to == -1)
 	{
 		dprintf(2, "Error: Can't write to %s\n", argv[2]);
@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 	close_status = close(fd_from);
 	if (close_status == -1)
 	{
-		dprintf(2, "Error: Can't close fd", fd_to);
+		dprintf(2, "Error: Can't close fd %d\n", fd_to);
 		close(100);
 	}
 	return (0);
