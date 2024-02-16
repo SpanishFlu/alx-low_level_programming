@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include "main.h"
-
+#include <string.h>
 /**
  * create_file - Creates a file and writes text to it.
  * @filename: The name of the file to create.
