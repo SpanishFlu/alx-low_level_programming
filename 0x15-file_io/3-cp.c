@@ -68,7 +68,7 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	
-	close_status = close(fd_to)
+	close_status = close(fd_to);
 	if (close_status == -1)
 	{
 		dprintf(2, "Error: Can't close fd %d\n", fd_to);
